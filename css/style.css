@@ -19,6 +19,40 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="chekbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*
+.inner-page {
+  color: #000000;
+
+  background-color: #f9f6f3;
+  background-image:url("/img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+*/
+
 .button {
   font: inherit;
 
@@ -42,8 +76,6 @@ a {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-
-  background-color: #000000;
 }
 
 .site-navigation,
@@ -241,6 +273,9 @@ body {
 }
 
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+
   width: 620px;
   margin: 0;
   padding: 0;
@@ -254,6 +289,44 @@ body {
   padding: 0;
   list-style: none;
 }
+
+.site-navigation a,
+.user-navigation a {
+  display: block;
+  padding: 25px 20px;
+
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.user-navigation .login-link {
+  position: relative;
+  padding-left: 50px;
+}
+
+.login-link::before {
+  content: "";
+
+  position: absolute ;
+  top: 27px;
+  left: 24px;
+
+  width: 16px;
+  height: 18px;
+
+  background-image: url(/img/login.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+  opacity: 1;
+}
+
 
 .features {
   margin-bottom: 80px;
@@ -269,6 +342,34 @@ body {
 
 .feature-item {
   width: 300px;
+}
+
+.feature-item h3 {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.feature-item h3::after {
+  content: "";
+  
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.feature-item p {
+  margin: 0 10px;
 }
 
 .index-columns {

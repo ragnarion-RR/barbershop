@@ -92,7 +92,7 @@
       <div class="gallery-container">
         <figure class="gallery-content">
           <a href="#">
-            <img src="img/Layer 21.jpg" width="286" height="164" alt="Интерьер">
+            <img src="img/Layer21.jpg" width="286" height="164" alt="Интерьер">
           </a>
         </figure>
         <button class="button gallery-button gallery-button-back" type="button">Назад</button>
@@ -179,24 +179,27 @@
 
   <section class="modal modal-login">
     <h2>Личный кабинет</h2>
-    <p>Введите логин и пароль.</p>
+    <p class="login-description">Введите логин и пароль.</p>
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
-        <input class="login-icon-user" id="user-login" type="email" name="login" placeholder="email@example.com">
+        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="email@example.com">
       </p>
       <p>
         <label class="visually-hidden" for="user-password">Пароль</label>
         <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="********">
       </p>
-      <p class="login-password-info">
-        <input type="checkbox" name="remember" id="login-password-info">
-        <label class="login-checkbox" for="login-password-info">Запомните меня</label>
+      <p class="login-help">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember" class="visually-hidden">
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
         <a class="restore" href="#">Я забыл пароль!</a>
       </p>
       <button class="button" type="submit">Войти</button>
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal-close" type="button"></button>
   </section>
 
   <section class="modal modal-map">
@@ -205,7 +208,10 @@
         <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу 
         ул. Большая конюшенная 19/8, Санкт-Петербург">
       </p>
-        <button class="modal-close" type="button">Закрыть</button>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
   </section>
 </body>
 </html> 
+

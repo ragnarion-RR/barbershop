@@ -67,7 +67,6 @@
   <div class="index-columns">
     <section class="news"> 
       <h2>Новости</h2>
-      <div class="news-container">
       <ul class="news-list">
         <li class="news-item">
           <p>
@@ -85,7 +84,6 @@
         </li>
       </ul>
       <a class="button" href="news.html">Все новости</a>
-    </div>
     </section>
 
     <section class="gallery">
@@ -184,11 +182,11 @@
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
-        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="email@example.com">
+        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="email@example.com" required>
       </p>
       <p>
         <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="********">
+        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="********" required>
       </p>
       <p class="login-help">
         <label class="login-checkbox">
@@ -213,5 +211,41 @@
           <span class="visually-hidden">Закрыть</span>
         </button>
   </section>
+
+  <script>
+    var link = document.querySelector(".login-link");
+    var popup = document.querySelector(".modal-login");
+    var close = document.querySelector(".modal-close");
+    var login = popup.querySelector("[name=login]");
+    var password = popup.querySelector("[name=password]");
+    var form = popup.querySelector("form");
+
+
+    link.addEventListener("click",function (evt) {
+      evt.preventDefault(); 
+      popup.classList.add("modal-show");
+      login.focus();
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault(); 
+      popup.classList.remove("modal-show");
+    });
+
+    form.addEventListener("submit", function(evt) {
+      evt.preventDefault();
+      console.log(login.value);
+      console.log(password.value);
+    });
+
+  </script>
+
+
+
+
+
+
+
+
 </body>
 </html> 

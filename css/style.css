@@ -984,25 +984,48 @@ body {
   margin-right: 10px;
 }
 
-/* всплывающие окна с js*/
-
-.modal-show {
-  display: block;
-}
-
-
 /* подчеркивание активной страницы сайта*/
 .site-navigation-current a {
   box-shadow: 0px 0px 0 red inset, 0px -5px 0 white inset;
 }
 
 
+/* всплывающие окна с js*/
+.modal-show {
+  display: block;
 
+  animation: bounce 0.6s;
+}
+
+/*анимация, появление окошка входа*/
+@keyframes bounce {
+  0% { transform: translateY(-2000px); }
+  70% { transform: translateY(30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/*анимация, потрясывание окошка входа*/
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(-10px); }
+  20%  { transform: translateX(10)px; }
+  30%  { transform: translateX(-10px); }
+  40%  { transform: translateX(10)px; }
+  50%  { transform: translateX(-10px); }
+  60%  { transform: translateX(10)px; }
+  70%  { transform: translateX(-10px); }
+  80%  { transform: translateX(10)px; }
+  90%  { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
 
 
 /*
-
 background: rgba(255, 45, 82, 0.2);
 box-shadow: 0 0 0 3px rgb(255, 45, 82);
-
-modal modal-login
+*/

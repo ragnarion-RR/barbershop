@@ -1,3 +1,4 @@
+/*окошко логин/пароль*/
 var link = document.querySelector(".login-link");
 var popup = document.querySelector(".modal-login");
 var close = document.querySelector(".modal-close");
@@ -54,8 +55,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-  
-  
-  
-  
-

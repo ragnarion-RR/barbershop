@@ -113,7 +113,7 @@
       Пн-Пт: с 10:00 до 22:00<br>
       Сб-Вс: с 10:00 до 19:00
       </p>
-      <a class="button" href="map.html">Как проехать</a>
+      <a class="button contacts-button-map" href="map.html">Как проехать</a>
       <a class="button" href="contacts.html">Обратная связь</a>
     </section>
 
@@ -149,7 +149,7 @@
       <p class="footer-contacts">
         Барбершоп «Бородинский»<br>
         Адрес: г. Санкт-Петербург, Б.Конюшенная, д. 19/8<br>
-        <a href="map.html">Как нас найти?</a><br>
+        <a class="contacts-button-map" href="map.html">Как нас найти?</a><br>
         Телефон: +7 (495) 666-02-66
       </p>
 
@@ -182,11 +182,11 @@
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-login">Логин</label>
-        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="email@example.com" required>
+        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="email@example.com">
       </p>
       <p>
         <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="********" required>
+        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="********">
       </p>
       <p class="login-help">
         <label class="login-checkbox">
@@ -203,8 +203,16 @@
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться.</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6089697
+    56751!2d30.321411251284633!3d59.938630492026505!2m3!1f0!2f0!3f0!3m2!1i1024!2i76
+    8!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y
+    8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0
+    YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1610057243259!5m2!1sr
+    u!2sby" width="766" height="560" allowfullscreen  frameborder="0" style="border:0;"
+    aria-hidden="false" tabindex="0" alt="Офис компании по адресу ул. Большая 
+    конюшенная 19/8, Санкт-Петербург"></iframe>  
       <p>
-        <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу 
+        <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу 
         ул. Большая конюшенная 19/8, Санкт-Петербург">
       </p>
         <button class="modal-close" type="button">
@@ -212,6 +220,7 @@
         </button>
   </section>
   
-  <script src="/js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html> 

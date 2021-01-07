@@ -1,1 +1,1 @@
-# barbershop ЗАУПППППА
+# barbershop
